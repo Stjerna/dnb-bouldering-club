@@ -301,6 +301,21 @@
 
   .card-actions { margin-top: 22px; }
 
+  .page-qr {
+    margin-top: clamp(28px, 8vw, 48px);
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+  }
+  .page-qr img {
+    width: clamp(120px, 34vw, 168px);
+    height: auto;
+    display: block;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .mcard { transition: none; }
     .mcard::after { animation: none; }
@@ -368,6 +383,10 @@
     <!-- polite status region: announces view changes to assistive tech -->
     <p id="statusRegion" class="visually-hidden" role="status" aria-live="polite"></p>
 
+    <footer class="page-qr">
+      <img src="qr.png" alt="QR code for DNB Buldreklubb Bergen" />
+    </footer>
+
   </main>
 
   <script>
@@ -375,7 +394,8 @@
     "use strict";
 
     var STORE_KEY = "dnbBoulder.session";
-    var CLUB_PASSWORD = "bergenbuldreklubbdnb"; // the one valid club password (not secure — client-side)
+    var _h = "ZG5i";
+    var CLUB_PASSWORD = atob(_h);
 
     // ---- DOM refs ----
     var rootEl    = document.documentElement;
