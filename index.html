@@ -302,18 +302,18 @@
   .card-actions { margin-top: 22px; }
 
   .page-qr {
-    margin-top: clamp(28px, 8vw, 48px);
+    margin-top: clamp(18px, 5vw, 28px);
     display: grid;
     justify-items: center;
-    gap: 10px;
   }
   .page-qr img {
-    width: clamp(120px, 34vw, 168px);
+    width: clamp(150px, 42vw, 210px);
     height: auto;
     display: block;
     background: #fff;
     padding: 10px;
     border-radius: 12px;
+    box-shadow: 0 14px 30px -18px rgba(0,0,0,.6);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -375,6 +375,10 @@
         </div>
       </div>
 
+      <div class="page-qr">
+        <img src="qr.png" alt="QR code for DNB Buldreklubb Bergen" />
+      </div>
+
       <div class="card-actions">
         <button id="logoutBtn" class="btn btn-ghost" type="button">Log out</button>
       </div>
@@ -382,10 +386,6 @@
 
     <!-- polite status region: announces view changes to assistive tech -->
     <p id="statusRegion" class="visually-hidden" role="status" aria-live="polite"></p>
-
-    <footer class="page-qr">
-      <img src="qr.png" alt="QR code for DNB Buldreklubb Bergen" />
-    </footer>
 
   </main>
 
